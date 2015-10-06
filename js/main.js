@@ -1,10 +1,11 @@
 
 (function () {
-  var backgr = ""
 
   var allhours = new Date().getHours();
   var allmins = new Date().getMinutes();
   var allsecs = new Date().getSeconds();
+
+  // console.log(allhours, allmins, allsecs);
 
 
 //Gather data from the clock and create timer
@@ -28,7 +29,35 @@
      $("#hours").html(( hours < 10 ? "0" : "" ) + hours);
      }, 1000);
 
-  console.log( );
+
+
+  //Creating function to push value of hex to background color in csss
+
+      var hexCode;
+
+  function allToget () {
+
+      var allhours = new Date().getHours();
+      var allmins = new Date().getMinutes();
+      var allsecs = new Date().getSeconds();
+
+      hexCode = '#' + allhours + allmins + allsecs
+
+
+  };
+
+
+      allToget();
+      window.setInterval(allToget, 1000);
+
+      var backGrd = function (){
+        $('body').css('background-color', hexCode);
+      };
+
+      backGrd();
+      window.setInterval(backGrd, 1000);
+
+
 
 })();
 
