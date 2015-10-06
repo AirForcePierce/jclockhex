@@ -41,20 +41,20 @@
       var allmins = new Date().getMinutes();
       var allsecs = new Date().getSeconds();
       
-      allhours = (allhours < 10 ? '0' : '') + allhours;
-      // allmins = (allhours < 10 ? '0' : '') + allmins;
-      // allsecs = (allhours < 10 ? '0' : '') + allsecs;
+      allhours = (allhours <10 ? '0' : '') + allhours;
+      allmins = (allmins < 10 ? '0' : '') + allmins;
+      allsecs = (allsecs < 10 ? '0' : '') + allsecs;
 
 
       var hexCode = '#' + allhours + allmins + allsecs;
-      // console.log(hexCode);
+      console.log(hexCode);
 
       function backGrd(){
       $('body').css('background-color', hexCode);
       };
 
-      backGrd();
-      window.setInterval(backGrd, 1000);
+        backGrd();
+        window.setInterval(backGrd, 1000);
 
 
   };
