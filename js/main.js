@@ -40,22 +40,36 @@
       var allhours = new Date().getHours();
       var allmins = new Date().getMinutes();
       var allsecs = new Date().getSeconds();
+      
+      allhours = (allhours < 10 ? '0' : '') + allhours;
+      // allmins = (allhours < 10 ? '0' : '') + allmins;
+      // allsecs = (allhours < 10 ? '0' : '') + allsecs;
 
-      hexCode = '#' + allhours + allmins + allsecs
+
+      var hexCode = '#' + allhours + allmins + allsecs;
+      // console.log(hexCode);
+
+      function backGrd(){
+      $('body').css('background-color', hexCode);
+      };
+
+      backGrd();
+      window.setInterval(backGrd, 1000);
 
 
   };
 
 
+
       allToget();
       window.setInterval(allToget, 1000);
 
-      var backGrd = function (){
-        $('body').css('background-color', hexCode);
-      };
+      // function backGrd(){
+      //   $('body').css('background-color', hexCode);
+      // };
 
-      backGrd();
-      window.setInterval(backGrd, 1000);
+      // backGrd();
+      // window.setInterval(backGrd, 1000);
 
 
 
