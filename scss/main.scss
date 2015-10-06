@@ -14,20 +14,17 @@ div {
 #hours {
   color: white;
   font-size: 100px;
+    &:before{
+    content: "#";
+  }
 }
 
 #minutes {
   color: white;
   font-size: 100px;
-  &:before{
-    content: ":";
-  }
 }
 
 #seconds {
   color: white;
   font-size: 100px;
-  &:before{
-    content: ":";
-  }
 }

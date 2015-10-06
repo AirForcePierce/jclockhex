@@ -1,4 +1,12 @@
 
+(function () {
+  var backgr = ""
+
+  var allhours = new Date().getHours();
+  var allmins = new Date().getMinutes();
+  var allsecs = new Date().getSeconds();
+
+
 //Gather data from the clock and create timer
 
   var gotSecs = setInterval( function() {
@@ -19,7 +27,10 @@
      var hours = new Date().getHours();
      $("#hours").html(( hours < 10 ? "0" : "" ) + hours);
      }, 1000);
-  
+
+  console.log( );
+
+})();
 
 
 

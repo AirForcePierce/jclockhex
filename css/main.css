@@ -11,15 +11,13 @@ div {
 #hours {
   color: white;
   font-size: 100px; }
+  #hours:before {
+    content: "#"; }
 
 #minutes {
   color: white;
   font-size: 100px; }
-  #minutes:before {
-    content: ":"; }
 
 #seconds {
   color: white;
   font-size: 100px; }
-  #seconds:before {
-    content: ":"; }
